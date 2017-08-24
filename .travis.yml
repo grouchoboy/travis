@@ -1,0 +1,11 @@
+language: go
+
+go :
+  - 1.8.x
+
+before_ install:
+  - go get -u github.com/golang/dep/cmd/dep
+
+script:
+  - dep unsure
+  - go test -v
